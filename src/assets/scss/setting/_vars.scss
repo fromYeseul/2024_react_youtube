@@ -1,0 +1,36 @@
+:root {
+    --mainfont-nanum: "nanumSquareNeo";
+    --mainfont-nexon: "nexonLv1";
+  
+    --black: #000;
+    --black100: #000;
+    --black200: #000;
+    --black300: #000;
+    --black400: #000;
+    --black500: #000;
+    
+    --white: #fff;
+    --white100: #fff;
+    --white200: #fff;
+    --white300: #fff;
+    --white400: #fff;
+    --white500: #fff;
+    
+    // 폰트 셋팅
+    font-family: var(--mainfont-nanum), var(--mainfont-nexon);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    
+    // 폰트 최적화
+    font-synthesis: none;   // bold, italic, small-caps 모두 금지
+    text-rendering: optimizeLegibility; //렌더링 속도와 기하학적 정밀도보다 가독성을 강조
+    -webkit-font-smoothing: antialiased;    // 어두운 배경의 밝은 텍스트에 대해 하위 픽셀 렌더링에서 더 밝게 보임
+    -moz-osx-font-smoothing: grayscale;     //상동, firefox
+    -webkit-text-size-adjust: 100%;
+  
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
