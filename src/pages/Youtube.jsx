@@ -1,17 +1,27 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Main from '../components/section/Main'
 import { youtubeText } from '../data/youtube'
-import { Link } from 'react-router-dom'
+import VideoCard from '../components/video/VideoCard'
 
 const Youtube = () => {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false)
+        }, 300)
+    }, []);
+
+    const youtubePageClass = loading ? 'isLoading' : 'isLoaded';
     return (
         <Main 
             title = "유튜브 사이트"
             description="유튜브 사이트 튜토리얼 강의입니다.">
-            <section id='youtube'>
+            <section id='youtube' className={youtubePageClass}>
                 <h2>유튜브!</h2>
                 <div className='video__inner'>
-                    {youtubeText.map((video, key)=> (
+                    <VideoCard videos={youtubeText}/>
+                    {/* {youtubeText.map((video, key)=> (
                     <div className='video' key={key}>
                         <div className='video__thumb play__icon'>
                             <Link to={`/video/${video.videoId}`}>
@@ -24,7 +34,7 @@ const Youtube = () => {
                             </Link>
                         </div>
                     </div>
-                    ))}
+                    ))} */}
                 </div>
             </section>
         </Main>
