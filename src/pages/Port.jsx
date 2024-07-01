@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Main from '../components/section/Main'
 import { portfolioText } from '../data/portfolio'
-import VideoCard from '../components/video/VideoCard'
+import VideoCard from '../components/videos/VideoCard'
 
 const Port = () => {
     const [loading, setLoading] = useState(true);

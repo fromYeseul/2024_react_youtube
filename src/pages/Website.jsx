@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Main from '../components/section/Main'
 
 import { websiteText } from '../data/website'
-import VideoCard from '../components/video/VideoCard'
+import VideoCard from '../components/videos/VideoCard'
 
 const Website = () => {
     const [loading, setLoading] = useState(true);

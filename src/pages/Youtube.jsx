@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Main from '../components/section/Main'
 import { youtubeText } from '../data/youtube'
-import VideoCard from '../components/video/VideoCard'
+import VideoCard from '../components/videos/VideoCard'
 
 const Youtube = () => {
     const [loading, setLoading] = useState(true);
